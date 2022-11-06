@@ -1,0 +1,31 @@
+問１
+ルートブリッジはswitch３
+
+問２
+・ルートポートを求める
+ switch1→switch3：100／switch1→switch2→switch4→switch3：219
+
+ switch2→switch1→switch3：119／switch2→switch4→switch3：200
+
+ switch4→switch3：100／switch4→switch2→switch1→switch3：219
+
+⇒switch1のF0/2がルートポート
+　switch2のF0/1がルートポート
+　switch4がE0/2がルートポート
+
+・指定ポートを求める
+ ①ルートブリッジの全てのポート
+　switch3のE0/1が指定ポート
+　switch3のE0/2が指定ポート
+
+ ②ルートポートの向かい
+　switch1のF0/1が指定ポート
+
+ ③各コリジョンドメインごとに1つ指定ポートが存在
+　→送信元スイッチのブリッジIDが小さいほうが指定ポートのなるので
+　　switch4のE0/1が指定ポート
+
+・switch2のF0/2がブロッキングポート
+
+
+
